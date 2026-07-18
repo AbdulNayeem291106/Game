@@ -397,3 +397,183 @@ function stopGame(){
 
 } 
 
+/* ==========================
+   VERSION 3B - ROAD TURNS
+   PART 1
+   TURN SYSTEM FOUNDATION
+========================== */
+
+
+/*
+   ROAD TURN VARIABLES
+*/
+
+
+let currentRoadDirection = "straight";
+
+
+let nextTurn = null;
+
+
+let turnDistance = 500;
+
+
+
+/*
+   Possible directions
+*/
+
+
+const directions = [
+
+    "left",
+    "right"
+
+];
+
+
+
+
+/*
+   Generate next turn
+*/
+
+
+function createNextTurn(){
+
+
+    let random =
+    Math.floor(Math.random() * directions.length);
+
+
+
+    nextTurn =
+    directions[random];
+
+
+
+    console.log(
+        "Next turn:",
+        nextTurn
+    );
+
+
+}
+
+
+
+
+
+/*
+   Show turn instruction
+*/
+
+
+function showTurnInstruction(){
+
+
+    let message =
+    document.createElement("div");
+
+
+
+    message.id =
+    "turnMessage";
+
+
+
+    message.innerHTML =
+
+    "⚠️ Turn " +
+    nextTurn.toUpperCase();
+
+
+
+    document.body.appendChild(message);
+
+
+
+    setTimeout(()=>{
+
+
+        message.remove();
+
+
+    },3000);
+
+
+}
+
+
+
+
+/*
+   Check road distance
+*/
+
+
+function checkTurn(){
+
+
+    turnDistance -= 2;
+
+
+
+    if(turnDistance <= 150){
+
+
+        if(nextTurn === null){
+
+            createNextTurn();
+
+        }
+
+
+        showTurnInstruction();
+
+
+    }
+
+
+
+    if(turnDistance <= 0){
+
+
+        activateTurn();
+
+
+    }
+
+
+}
+
+
+
+
+/*
+   Activate road turn
+*/
+
+
+function activateTurn(){
+
+
+    currentRoadDirection =
+    nextTurn;
+
+
+
+    console.log(
+        "Road turned:",
+        currentRoadDirection
+    );
+
+
+
+    nextTurn = null;
+
+
+    turnDistance = 500;
+
+
+}  
