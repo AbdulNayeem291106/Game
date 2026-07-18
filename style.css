@@ -1,101 +1,162 @@
-*{
+/* ==========================
+   VERSION 2 - STYLE CSS
+   PART 1
+   Basic setup + Start Screen
+========================== */
 
-margin:0;
 
-padding:0;
+/* Reset */
 
-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
 
 }
 
-body{
 
-font-family:Arial;
+/* ==========================
+   START SCREEN
+========================== */
 
-}
 
-#startScreen{
+#startScreen {
 
-width:100vw;
+    width: 100vw;
 
-height:100vh;
+    height: 100vh;
 
-background:url("image1.jpg");
+    background-image: url("image1.jpg");
 
-background-size:cover;
+    background-size: cover;
 
-background-position:center;
+    background-position: center;
 
-display:flex;
+    background-repeat: no-repeat;
 
-justify-content:center;
 
-align-items:center;
+    display: flex;
 
-}
+    justify-content: center;
 
-.overlay{
-
-background:rgba(0,0,0,0.45);
-
-padding:25px;
-
-border-radius:15px;
-
-text-align:center;
-
-color:white;
-
-width:85%;
-
-max-width:350px;
+    align-items: center;
 
 }
 
-h1{
 
-margin-bottom:20px;
+/* Dark transparent layer
+   keeps image visible but text readable */
 
-}
+.overlay {
 
-input{
+    width: 85%;
 
-width:100%;
+    max-width: 380px;
 
-padding:12px;
+    padding: 30px;
 
-font-size:18px;
+    border-radius: 20px;
 
-border:none;
 
-border-radius:8px;
+    background: rgba(0,0,0,0.45);
 
-margin-bottom:15px;
 
-}
+    text-align: center;
 
-button{
+    color: white;
 
-padding:12px 30px;
 
-font-size:18px;
-
-border:none;
-
-border-radius:8px;
-
-background:#ff9800;
-
-color:white;
+    backdrop-filter: blur(2px);
 
 }
 
-#error{
 
-margin:10px;
 
-font-weight:bold;
+.overlay h1 {
 
-color:red;
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+#playerName {
+
+
+    width: 100%;
+
+    padding: 14px;
+
+
+    border: none;
+
+    border-radius: 10px;
+
+
+    font-size: 18px;
+
+
+    outline: none;
+
+
+    margin-bottom: 15px;
+
+
+}
+
+
+
+#error {
+
+
+    min-height: 25px;
+
+
+    color: red;
+
+
+    font-size: 17px;
+
+
+    font-weight: bold;
+
+
+    margin-bottom: 10px;
+
+
+}
+
+
+
+button {
+
+
+    border: none;
+
+
+    padding: 12px 30px;
+
+
+    border-radius: 10px;
+
+
+    font-size: 18px;
+
+
+    cursor: pointer;
+
 
 }
