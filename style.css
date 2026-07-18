@@ -516,3 +516,136 @@ button {
 
 } 
 
+/* ==========================
+   VERSION 3A - PART 3
+   CITY BACKGROUND + ROAD
+========================== */
+
+
+/* Game world */
+
+#gameWorld {
+
+    position: absolute;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+
+
+/* City background */
+
+#cityBackground {
+
+
+    position: absolute;
+
+
+    width: 100%;
+
+
+    height: 100%;
+
+
+    background-image: url("city.png");
+
+
+    background-size: cover;
+
+
+    background-position: center;
+
+
+    z-index: 1;
+
+
+}
+
+
+
+/* Road comes above city */
+
+#road {
+
+
+    position: absolute;
+
+
+    bottom: 0;
+
+
+    left: 50%;
+
+
+    transform: translateX(-50%);
+
+
+    width: 70%;
+
+
+    height: 100%;
+
+
+    background-image: url("road.jpg");
+
+
+    background-size: cover;
+
+
+    background-position: center;
+
+
+    z-index: 2;
+
+
+}
+
+
+
+/* Player above road */
+
+#player {
+
+
+    z-index: 5;
+
+
+}
+
+
+
+/* Road moving animation */
+
+@keyframes roadMove {
+
+
+    from {
+
+        background-position-y: 0px;
+
+    }
+
+
+    to {
+
+        background-position-y: 500px;
+
+    }
+
+
+}
+
+
+
+#road {
+
+
+    animation: roadMove 4s linear infinite;
+
+
+}  
