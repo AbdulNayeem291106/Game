@@ -9,6 +9,17 @@ let playerName = "";
 
 
 
+/* ==========================
+   FIXED NAME SYSTEM
+========================== */
+
+
+let playerName = "";
+
+let gameRunning = false;
+
+
+
 function checkName(){
 
 
@@ -43,15 +54,12 @@ function checkName(){
 
 
         error.innerHTML =
-        "❌ Please enter the correct name.";
+        "❌ Please enter the correct name Akram";
 
 
     }
 
-
 }
-
-
 
 
 function startGame(){
