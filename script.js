@@ -65,11 +65,22 @@ function checkName(){
 function startGame(){
 
 
-    console.log("Game Started for " + playerName);
+    gameRunning = true;
 
 
-} 
+    playerRunning = true;
 
+
+    gameLoop();
+
+
+    console.log(
+        "Game Started for "
+        + playerName
+    );
+
+
+}
 /* ==========================
    VERSION 2 - SCRIPT.JS
    PART 2
