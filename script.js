@@ -5,6 +5,8 @@ let gameRunning = false;
 
 function checkName(){
 
+alert("Button is working");
+
     let input = document
     .getElementById("playerName")
     .value
