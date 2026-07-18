@@ -1,64 +1,40 @@
 function checkName(){
 
-let name=document
-.getElementById("nameBox")
-.value
-.trim();
+let name =
+document.getElementById("playerName").value.trim();
 
-let error=
+let error =
 document.getElementById("error");
 
 if(name==="Akram"){
 
 document.body.innerHTML=`
 
-<div style="
+<div id="startScreen">
 
-background:url('images/start.jpg');
+<div class="overlay">
 
-background-size:cover;
+<h1>
 
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-">
-
-<h1 style="color:white">
-
-Hi Akram!
+Hi Akram ❤️
 
 </h1>
 
-<h2 style="color:white">
+<h2>
 
 Shall we start the game?
 
 </h2>
 
-<button
+<br>
 
-style="
-
-padding:15px;
-
-font-size:22px;
-
-margin-top:30px;
-
-"
-
-onclick="alert('Game starts in Part 2')">
+<button onclick="startGame()">
 
 START
 
 </button>
+
+</div>
 
 </div>
 
@@ -73,5 +49,11 @@ error.innerHTML=
 "❌ Please enter the correct name.";
 
 }
+
+}
+
+function startGame(){
+
+alert("Game begins in Part 2!");
 
 }
