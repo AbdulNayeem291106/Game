@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -9,109 +8,34 @@
 
 <title>Happy Birthday Akram</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
-
-
-<!-- START SCREEN -->
-
-<div id="startScreen">
 
 <div class="overlay">
 
-<h1>🎂 Birthday Game 🎂</h1>
+<h1>🎂 Birthday Adventure 🎂</h1>
 
+<div class="box">
 
 <input
-id="playerName"
 type="text"
+id="playerName"
 placeholder="Enter your name">
 
+<p id="message"></p>
 
-<p id="error"></p>
-
-
-<button onclick="checkName()">
-
-Continue
-
+<button id="startBtn" disabled>
+Start Game
 </button>
 
-
 </div>
 
 </div>
 
-
-
-<!-- GAME SCREEN -->
-
-<div id="gameScreen" style="display:none;">
-
-
-<div id="hud">
-
-⭐ Score:
-<span id="scoreValue">0</span>
-
-
-</div>
-
-
-
-<div id="gameWorld">
-
-
-<div id="cityBackground"></div>
-
-
-
-<div id="road">
-
-
-<div id="player">
-
-
-<img src="player.png" id="playerImage">
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-<div id="controls">
-
-
-<button id="leftBtn">
-⬅
-</button>
-
-
-<button id="rightBtn">
-➡
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-<script src="script.js"></script>
-
+<script src="js/script.js"></script>
 
 </body>
 
