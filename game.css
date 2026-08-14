@@ -33,21 +33,13 @@ overflow:hidden;
 }
 
 #player{
-
-position:absolute;
-
-bottom:-30px;
-
-left:45%;
-
-width:70px;
-
-height:auto;
-
-transition:.15s;
-
-z-index:10;
-
+    position:absolute;
+    bottom:120px;
+    left:40%;
+    width:60px;
+    height:auto;
+    transition:0.15s;
+    z-index:10;
 }
 
 #score{
