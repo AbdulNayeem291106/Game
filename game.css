@@ -15,21 +15,14 @@ overflow:hidden;
 }
 
 #gameArea{
+    position:relative;
+    width:100vw;
+    height:100vh;
 
-position:relative;
+    background:url("../road.jpg") no-repeat center center;
+    background-size:cover;
 
-width:100vw;
-
-height:100vh;
-
-background:url("../road.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-overflow:hidden;
-
+    overflow:hidden;
 }
 
 #player{
